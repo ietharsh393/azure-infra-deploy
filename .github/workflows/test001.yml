@@ -19,7 +19,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run a test command
-        run: echo "Hello, GitHub Actions!"
         env:
           bye: bye 
         run: echo $cloud is the $best cloud and $bye
