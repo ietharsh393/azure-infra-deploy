@@ -1,24 +1,11 @@
-name: Test Workflow
+name: hello-world
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-env:
-  cloud: google-cloud  
+on: 
+  workflow_dispatch:
 
-jobs:
-  test-job:
+jobs: 
+  hello:
     runs-on: ubuntu-latest
-    env:
-      best: best
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Run a test command
-        env:
-          bye: bye 
-        run: echo $cloud is the $best cloud and $bye
+    steps: 
+      - name: Print hello world
+        run: echo "Hello, World"
